@@ -9,15 +9,14 @@ const Contacts = ({ contacts }) => {
     return (
         <StyledContactList>
             {contacts.map(contact => {
-                return <li key={nanoid()}>{contact.name}</li>
+                return <li key={nanoid()}>{contact.name}: { contact.number}</li>
             })}
         </StyledContactList >
    )
 }
 
 const StyledContactList = styled.ul`
-margin:0;
-padding:0;
+
 `;
 
 Contacts.propTypes = {
