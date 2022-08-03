@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 
 const Section = ({title, children})=>{
     return (
-        <section>
+        <StyledSection>
             <StyledTitle>{title}</StyledTitle>
             { children}
-        </section>
+        </StyledSection>
     )
 }
 
 export default Section
+
+const StyledSection = styled.section`
+width:500px`
 
 const StyledTitle = styled.h2`
 `
