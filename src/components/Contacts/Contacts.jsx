@@ -15,9 +15,7 @@ const Contacts = ({ contacts }) => {
    )
 }
 
-const StyledContactList = styled.ul`
-
-`;
+const StyledContactList = styled.ul``;
 
 Contacts.propTypes = {
     contacts: PropTypes.array
