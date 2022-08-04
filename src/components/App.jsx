@@ -15,12 +15,18 @@ export class App extends Component {
   }
   
   formSubmitHandler = (data) => {
+    
     this.setState(prevState => {
+      const mappingPrevState = prevState.contacts.map(contact => contact.name);
+      
+      if (mappingPrevState.includes(data.name)) {
+       return alert(`${data.name} is already in contacts`)
+      }
       return {
         contacts:[ ...prevState.contacts, data]
       }
     });
-    // console.log(data);
+    
   };
 
   changeFilter = (event) => {
@@ -36,7 +42,7 @@ export class App extends Component {
     const filteredContacts = this.state.contacts.filter(contact =>
     contact.name.toLowerCase().includes(this.state.filter.toLowerCase()));
 
-    console.log(this.state.contacts);
+    // console.log(this.state.contacts);
     return (
       <>
         <Section title="Phonebook">
