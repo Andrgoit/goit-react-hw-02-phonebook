@@ -15,11 +15,11 @@ export class App extends Component {
   }
   
   formSubmitHandler = (data) => {
-    
+    // console.log('18-this.state',this.state);
     this.setState(prevState => {
-      const mappingPrevState = prevState.contacts.map(contact => contact.name);
+      // console.log('20- prevState', prevState);
       
-      if (mappingPrevState.includes(data.name)) {
+      if (prevState.contacts.find(contact => contact.name===data.name)) {
        return alert(`${data.name} is already in contacts`)
       }
       return {

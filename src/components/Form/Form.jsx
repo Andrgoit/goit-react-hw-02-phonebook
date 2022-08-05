@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import styled from "styled-components"
 import { nanoid } from 'nanoid'
+
+import{StyledForm,StyledSubmitButton } from 'components/Form/Form.styled'
+
 
 class Form extends Component{
     state = {
@@ -55,14 +57,6 @@ class Form extends Component{
     }
 }
 
-const StyledForm = styled.form`
-padding-bottom: 30px;
-display:flex;
-flex-direction:column`
 
-const StyledSubmitButton = styled.button`
-max-width:100px;
-margin-top: 30px;
-`
 
 export default Form
